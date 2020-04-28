@@ -1,7 +1,14 @@
-# Project 2 Repo
+# 281 Project 2 Learning Outcomes
 
-Repo start-state:
+- Web APIs
+- JSON
+- jQuery
 
-1. README.md
-2. .gitignore
-3. gallery.html, gallery.css, gallery.js
+## 281 Project 1 Learning Objectives
+
+- Basic Unix Shell commands
+- Install and Configure Git using the Unix Shell
+- Github Overview
+- Make directories through unix
+
+#### [281 website](https://pages.uoregon.edu/carmenh/281/)

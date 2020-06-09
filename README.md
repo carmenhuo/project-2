@@ -17,5 +17,6 @@ In the 21st century, every business– from fashion to finance– is a tech comp
 - Basic Unix Shell commands
 - Install and Configure Git using the Unix Shell
 - Basic Git Commands (add, commit, push, clone)
-- Github overview•Markdown language for README files
+- Github overview
+- Markdown language for README files
 - JavaScript ES6+ features

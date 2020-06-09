@@ -1,19 +1,21 @@
 // jshint esversion: 6
 
-let main = function(){
+let controller = function() {
+  let prefixURL =
+    "https://api.flickr.com/services/feeds/photos_public.gne?tags=";
+  let suffixURL = "&format=json&jsoncallback=?";
+  //get value entered by user from textbox
+  //let flickrTag = document.querySelector("input[type=text]").value; (WORKS)
 
-    let prefixURL = "http://api.flickr.com/services/feeds/photos_public.gne?tags=";
-    let suffixURL = "&format=json&jsoncallback=?";
-    //get value entered by user from textbox
-    let flickrTag = $("input").???();
-    let requestURL = prefixURL + flickrTag + suffixURL;
-
-    //clear old photos
-    $(".photos").???("");
+  let flickrTag = $("input").val();
+  console.log(flickrTag); //delete this
+  let requestURL = prefixURL + flickrTag + suffixURL;
+  console.log(requestURL); //delete this
+  //clear old photos
+  $(".photos").html("");
 
   $.getJSON(requestURL, function(flickrResponse) {
     flickrResponse.items.forEach(function(item, index) {
-
       //Flickr returns 20 images by default
       //We need only six images for the Gallery
       if (index < 6) {
@@ -32,9 +34,26 @@ let main = function(){
         $img.fadeIn();
       }
     });
-
   });
 };
 
+// $(document).ready(controller);
 
-$(document).ready(main);
+//Register the controller after the DOM is complete
+window.addEventListener("load", () => {
+  //select the button
+  let button = document.querySelector("button");
+
+  //register the click handler for the button
+  button.addEventListener("click", controller);
+});
+//without using jQuery
+
+window.addEventListener("load", function() {
+  //select the button and register the handler
+  document.querySelector("button").addEventListener(
+    "click",
+
+    controller
+  );
+});
